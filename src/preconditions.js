@@ -3,7 +3,7 @@ import { AssertionError } from 'assert'
 
 /**
  * @param {Boolean} condition 
- * @param {string} message 
+ * @param {string} [message] 
  * @throws {PreconditionError}
  * @returns {void}
  */
