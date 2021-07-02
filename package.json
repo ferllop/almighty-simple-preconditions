@@ -1,0 +1,27 @@
+{
+  "name": "preconditions",
+  "version": "1.0.0",
+  "description": "A simple library to check preconditions",
+  "main": "preconditions.js",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "uvu": "^0.5.1"
+  },
+  "scripts": {
+    "test": "uvu ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ferllop/preconditions.git"
+  },
+  "keywords": [
+    "preconditions"
+  ],
+  "author": "Ferran Llop Alonso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferllop/preconditions/issues"
+  },
+  "homepage": "https://github.com/ferllop/preconditions#readme"
+}
