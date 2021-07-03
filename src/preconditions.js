@@ -8,15 +8,22 @@ import { AssertionError } from 'assert'
  * @returns {void}
  */
 export function precondition(condition, message) {
-  try {
-    assert(condition, message)
-  } catch (error) {
-    if (error instanceof AssertionError) {
-      throw new PreconditionError(message)
-    } else {
-      throw error
+  if (isPreconditionsEnabled()) {
+    try {
+      assert(condition, message)
+    } catch (error) {
+      if (error instanceof AssertionError) {
+        throw new PreconditionError(message)
+      } else {
+        throw error
+      }
     }
   }
+}
+
+function isPreconditionsEnabled() {
+  const variableToEnablePreconditions = 'ENABLE_PRECONDITIONS'
+  return process.env[variableToEnablePreconditions] === 'true'
 }
 
 export class PreconditionError extends Error {
