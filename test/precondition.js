@@ -3,7 +3,16 @@ import { precondition as preconditionSUT, PreconditionError } from '../precondit
 
 const precondition = suite("Precondition")
 
-precondition('should do nothing when precondition is meet', () => {
+precondition.before.each(() => {
+    process.env.ENABLE_PRECONDITIONS = 'true'
+})
+
+precondition('should do nothing if ENABLE_PRECONDITIONS environment variable is not set', () => {
+    delete process.env.ENABLE_PRECONDITIONS
+    assert.doesNotThrow(() => preconditionSUT(false), Error)
+})
+
+precondition('should not throw PreconditionError when precondition is meet', () => {
     assert.doesNotThrow(() => preconditionSUT(true), Error)
 })
 
