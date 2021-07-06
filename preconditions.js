@@ -1,1 +1,2 @@
-export { precondition, PreconditionError } from './src/preconditions.js'
+export { precondition } from './src/preconditions.js'
+export { PreconditionError} from './src/PreconditionError.js'
