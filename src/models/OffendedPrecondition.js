@@ -1,5 +1,5 @@
 import { ErrorParticipant } from './ErrorParticipant.js'
-import { PreconditionStackTraceParser } from './PreconditionStackTraceParser.js'
+import { PreconditionStackTraceParser } from '../models/PreconditionStackTraceParser.js'
 
 export class OffendedPrecondition extends ErrorParticipant {
     /**@type {string} argument */
