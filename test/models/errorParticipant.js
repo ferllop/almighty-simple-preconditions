@@ -1,8 +1,7 @@
-import { ErrorParticipant } from '../src/ErrorParticipant.js'
-import { PreconditionStackTraceParser } from '../src/PreconditionStackTraceParser.js'
-import { ClientClass } from './ClientClass.js'
-import { assert, suite } from './test-config.js'
-import { WithPreconditionClass } from './WithPreconditionClass.js'
+import { ErrorParticipant } from '../../src/models/ErrorParticipant.js'
+import { PreconditionStackTraceParser } from '../../src/models/PreconditionStackTraceParser.js'
+import { ClientClass } from '../test-helpers/ClientClass.js'
+import { assert, suite } from '../test-config.js'
 
 const errorParticipant = suite('ErrorParticipant')
 

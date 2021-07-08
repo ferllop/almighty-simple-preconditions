@@ -1,6 +1,6 @@
 import { strict as assert } from 'assert'
 import { AssertionError } from 'assert'
-import { PreconditionError } from './PreconditionError.js'
+import { PreconditionError } from './models/PreconditionError.js'
 
 /**
  * @param {Boolean} condition 

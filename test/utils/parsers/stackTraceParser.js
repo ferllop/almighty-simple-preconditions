@@ -1,7 +1,7 @@
-import { assert, suite } from './test-config.js'
-import { StackTraceParser } from '../src/utils/parsers/StackTraceParser.js'
-import { ClientClass } from './ClientClass.js'
-import { WithPreconditionClass } from './WithPreconditionClass.js'
+import { assert, suite } from '../../test-config.js'
+import { StackTraceParser } from '../../../src/utils/parsers/StackTraceParser.js'
+import { ClientClass } from '../../test-helpers/ClientClass.js'
+import { WithPreconditionClass } from '../../test-helpers/WithPreconditionClass.js'
 
 const stackTraceParser = suite('StackTraceParser')
 

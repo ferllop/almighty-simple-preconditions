@@ -1,5 +1,5 @@
-import { CodeParser } from '../src/utils/parsers/CodeParser.js'
-import { assert, suite } from './test-config.js'
+import { CodeParser } from '../../../src/utils/parsers/CodeParser.js'
+import { assert, suite } from '../../test-config.js'
 
 const codeParser = suite('CodePaser')
 
