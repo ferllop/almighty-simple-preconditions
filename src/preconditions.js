@@ -1,5 +1,6 @@
 import { strict as assert } from 'assert'
 import { AssertionError } from 'assert'
+import { PreconditionError } from './PreconditionError.js'
 
 /**
  * @param {Boolean} condition 
@@ -24,8 +25,4 @@ export function precondition(condition, message) {
 function isPreconditionsEnabled() {
   const variableToEnablePreconditions = 'ENABLE_PRECONDITIONS'
   return process.env[variableToEnablePreconditions] === 'true'
-}
-
-export class PreconditionError extends Error {
-
 }

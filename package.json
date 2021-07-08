@@ -9,7 +9,8 @@
     "uvu": "^0.5.1"
   },
   "scripts": {
-    "test": "uvu ./test"
+    "test": "uvu ./test",
+    "example": "ENABLE_PRECONDITIONS=true node examples/failingPrecondition.js"
   },
   "repository": {
     "type": "git",
