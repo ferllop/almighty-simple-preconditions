@@ -1,5 +1,6 @@
 import { suite, assert } from './test-config.js'
-import { precondition as preconditionSUT, PreconditionError } from '../preconditions.js'
+import { PreconditionError } from '../preconditions.js'
+import { ClientClass } from './ClientClass.js'
 
 const precondition = suite("Precondition")
 
@@ -9,15 +10,15 @@ precondition.before.each(() => {
 
 precondition('should do nothing if ENABLE_PRECONDITIONS environment variable is not set', () => {
     delete process.env.ENABLE_PRECONDITIONS
-    assert.doesNotThrow(() => preconditionSUT(false), Error)
+    assert.doesNotThrow(() => new ClientClass().offendingMethod(), Error)
 })
 
 precondition('should not throw PreconditionError when precondition is meet', () => {
-    assert.doesNotThrow(() => preconditionSUT(true), Error)
+    assert.doesNotThrow(() => new ClientClass().notOffendingMethod(), PreconditionError)
 })
 
 precondition('should throw a PreconditionError when precondition is not meet', () => {
-    assert.throws(() => preconditionSUT(false), PreconditionError)
+    assert.throws(() => new ClientClass().offendingMethod(), PreconditionError)
 })
 
 precondition.run()
