@@ -5,7 +5,7 @@ A simple library to be able to assert preconditions in our javascript methods or
 No matchers, just boolean operations.
 
 ## Activation
-You have to activate preconditions explicitly setting a ENABLE_PRECONDITIONS to true. You can do it in two ways:
+You have to activate preconditions explicitly setting a ENABLE_PRECONDITIONS to true as an environment variable. You can do it in two ways:
 
 1. Enable when executing the command. For example:
 ```
@@ -23,7 +23,7 @@ or in npm script:
  ```
  export ENABLE_PRECONDITIONS=true
  ```
-and then you can run your commands normally, like:
+and then you can run your commands as usually, like:
 ```
 $ node index.js
 ```
@@ -32,22 +32,27 @@ For having this last option working after rebooting your machine, remember to pu
 <br />
 
 ## Usage
-This will throw a PreconditionAssert if paramA is null:
+This will throw a PreconditionError because name is less than two strings:
 ```
-someFunction(num) {
-    precondition(typeof num === "number" && num > 0)
-    return 1 / num
-}
+5    function greeting(name) {
+6        precondition(typeof name === "string" && name.length > 2)
+7        return 'Hello, ' + name
+8    }
+9    
+10    greeting('Pi')
 ```
 And the error.message will be like this:
 ```
-Precondition "typeof num === "number" && num > 0", written on line 5 of file "/project/WithPreconditionClass.js", was offended by call "this.withPreconditionClass.preconditionedMethod(-1)", written on line 13 of file "/project/ClientClass.js".
+Precondition "typeof name === "string" && name.length > 2", 
+written on line 6 of file "/some-project/example.js", 
+was offended by call "greeting('Pi')", 
+written on line 10 of file "/some-project/example.js".
 ```
 
 <br />
 
 ## EXAMPLE
-You can run an example executing:
+You can run a more complete example running:
 ```
 $ npm run example
 ```
