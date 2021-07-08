@@ -19,7 +19,7 @@ preconditionStackTraceParser('should get the argument of the offended preconditi
 })
 
 preconditionStackTraceParser('should get the filename where the offended precondition is written', () => {
-    assert.equal(sut.getOffendedPreconditionFilename(), WithPreconditionClass.FILEPATH)
+    assert.equal(sut.getOffendedPreconditionFilepath(), WithPreconditionClass.FILEPATH)
 })
 
 preconditionStackTraceParser('should get the line where the offended precondition is written', () => {
@@ -31,7 +31,7 @@ preconditionStackTraceParser('should get the offending call', () => {
 })
 
 preconditionStackTraceParser('should get the filename where the offending call is written', () => {
-    assert.equal(sut.getOffendingCallFilename(), ClientClass.FILEPATH)
+    assert.equal(sut.getOffendingCallFilepath(), ClientClass.FILEPATH)
 })
 
 preconditionStackTraceParser('should get the line where the offending call is written', () => {

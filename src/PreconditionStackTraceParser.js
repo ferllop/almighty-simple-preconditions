@@ -14,7 +14,7 @@ export class PreconditionStackTraceParser extends StackTraceParser {
         return this.getLastStackLineNumber() + 1
     }
     
-    getOffendedPreconditionFilename() {
+    getOffendedPreconditionFilepath() {
         return this.getErrorLineFilepath(this.getOffendedPreconditionTraceLineNumber())
     }
     
@@ -34,7 +34,7 @@ export class PreconditionStackTraceParser extends StackTraceParser {
         return this.getOffendedPreconditionTraceLineNumber() + 1
     }
 
-    getOffendingCallFilename() {
+    getOffendingCallFilepath() {
         return this.getErrorLineFilepath(this.getOffendingCallTraceLineNumber())
     }
 

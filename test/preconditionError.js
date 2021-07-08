@@ -11,16 +11,12 @@ preconditionError.before.each(() => {
     sut = ClientClass.getError()
 })
 
-preconditionError('should have a field with the offended precondition argument', () => {
-        assert.equal(sut.offendedPrecondition, WithPreconditionClass.PRECONDITION_ARGUMENT)
+preconditionError('should have a field with the offended precondition', () => {
+        assert(sut.offendedPrecondition)
 })
 
-preconditionError('should have a field with the offensive precondition method', () => {
-    assert(sut.offendingCall.includes(ClientClass.OFFENDING_CALL))
-})
-
-preconditionError('if message is provided, it should have a field with the offensive precondition method', () => {
-    assert(sut.offendingCall.includes(ClientClass.OFFENDING_CALL))
+preconditionError('should have a field with the offending call', () => {
+    assert(sut.offendingCall)
 })
 
 preconditionError.run()
