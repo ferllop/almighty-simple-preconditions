@@ -1,0 +1,21 @@
+@startuml
+
+class Precondition
+class PreconditionError
+abstract class MultilineParser {
+    {abstract} startingLine(): number
+}
+class StackTraceParser
+class PreconditionStackTraceParser
+class CodeParser
+
+
+Precondition ..> PreconditionError
+PreconditionError ..> PreconditionStackTraceParser
+StackTraceParser ..> CodeParser
+
+StackTraceParser --|> MultilineParser
+PreconditionStackTraceParser --|> StackTraceParser
+CodeParser --|> MultilineParser
+
+@enduml
