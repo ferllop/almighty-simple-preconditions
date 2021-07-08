@@ -1,5 +1,5 @@
-import { assert, suite } from './test-config.js'
-import { MultilineParser } from '../src/utils/parsers/MultilineParser.js'
+import { assert, suite } from '../../test-config.js'
+import { MultilineParser } from '../../../src/utils/parsers/MultilineParser.js'
 
 const multilineParser = suite('MultilineParser')
 

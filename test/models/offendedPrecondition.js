@@ -1,9 +1,8 @@
-import { OffendedPrecondition } from '../src/OffendedPrecondition.js'
-import { OffendingCall } from '../src/OffendingCall.js'
-import { PreconditionStackTraceParser } from '../src/PreconditionStackTraceParser.js'
-import { ClientClass } from './ClientClass.js'
-import { assert, suite } from './test-config.js'
-import { WithPreconditionClass } from './WithPreconditionClass.js'
+import { OffendedPrecondition } from '../../src/models/OffendedPrecondition.js'
+import { PreconditionStackTraceParser } from '../../src/models/PreconditionStackTraceParser.js'
+import { ClientClass } from '../test-helpers/ClientClass.js'
+import { assert, suite } from '../test-config.js'
+import { WithPreconditionClass } from '../test-helpers/WithPreconditionClass.js'
 
 const offendedPrecondition = suite('OffendedPrecondition')
 

@@ -1,4 +1,4 @@
-import { ClientClass } from '../test/ClientClass.js'
+import { ClientClass } from '../test/test-helpers/ClientClass.js'
 console.log('##################')
 console.log('# EXAMPLE STARTS #')
 console.log('##################')

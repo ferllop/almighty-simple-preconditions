@@ -1,4 +1,4 @@
-import { MessageBuilder } from './utils/MessageBuilder.js'
+import { MessageBuilder } from '../utils/MessageBuilder.js'
 import { PreconditionStackTraceParser } from './PreconditionStackTraceParser.js'
 import { OffendedPrecondition } from './OffendedPrecondition.js'
 import { OffendingCall } from './OffendingCall.js'

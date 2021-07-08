@@ -1,4 +1,4 @@
-import { precondition } from '../preconditions.js'
+import { precondition } from '../../preconditions.js'
 
 export class WithPreconditionClass {
     preconditionedMethod(arg1) {

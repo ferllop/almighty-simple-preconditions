@@ -1,7 +1,6 @@
 import { PreconditionError } from '../preconditions.js'
-import { WithPreconditionClass } from './WithPreconditionClass.js'
 import { suite, assert } from './test-config.js'
-import { ClientClass } from './ClientClass.js'
+import { ClientClass } from './test-helpers/ClientClass.js'
 
 const preconditionError = suite('PreconditionError')
 

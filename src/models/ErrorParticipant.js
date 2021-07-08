@@ -1,4 +1,4 @@
-import { PreconditionStackTraceParser } from './PreconditionStackTraceParser.js'
+import { PreconditionStackTraceParser } from '../models/PreconditionStackTraceParser.js'
 
 /**@abstract */
 export class ErrorParticipant {

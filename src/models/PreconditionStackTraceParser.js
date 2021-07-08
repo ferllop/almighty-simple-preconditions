@@ -1,5 +1,5 @@
-import { CodeParser } from './utils/parsers/CodeParser.js'
-import { StackTraceParser } from './utils/parsers/StackTraceParser.js'
+import { CodeParser } from '../utils/parsers/CodeParser.js'
+import { StackTraceParser } from '../utils/parsers/StackTraceParser.js'
 
 export class PreconditionStackTraceParser extends StackTraceParser {
    
