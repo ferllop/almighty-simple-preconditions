@@ -4,6 +4,9 @@
   "description": "A simple library to check preconditions",
   "main": "preconditions.js",
   "type": "module",
+  "exports": {
+    ".": "./preconditions.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "uvu": "^0.5.1"
